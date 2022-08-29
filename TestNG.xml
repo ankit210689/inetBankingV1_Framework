@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="inetBankingV1_Framework">
+
+<listeners>
+<!-- New tag added for listener class -->
+<listener class-name="com.inetbanking.utilities.Reporting"/>
+
+</listeners>
+
+
+<test name="BankingApp Test">
+
+<!-- Change this parameter value to run on a different browser -->
+<parameter name="browser" value="chrome"/>
+<classes>
+<class name="com.inetbanking.testCases.TC_LoginTest_001"/>
+<!--  <class name="com.inetbanking.testCases.TC_LoginDDT_002"/> --><!-- Data driven test case added to TestNG.xml file -->
+<!--  <class name="com.inetbanking.testCases.TC_AddCustomerTest_003"/>-->
+</classes>
+
+</test>
+
+</suite>
