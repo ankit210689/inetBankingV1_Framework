@@ -1,1 +1,8 @@
 This is testfile.txt created to check the pull command operation of a new file added directly in remote repository
+This is testfile.txt created to check the pull command operation of a new file added directly in remote repository
+This is testfile.txt created to check the pull command operation of a new file added directly in remote repository
+This is testfile.txt created to check the pull command operation of a new file added directly in remote repository
+This is testfile.txt created to check the pull command operation of a new file added directly in remote repository
+This is testfile.txt created to check the pull command operation of a new file added directly in remote repository
+This is testfile.txt created to check the pull command operation of a new file added directly in remote repository
+This is testfile.txt created to check the pull command operation of a new file added directly in remote repository
