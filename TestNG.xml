@@ -15,8 +15,8 @@
 <parameter name="browser" value="chrome"/>
 <classes>
 <class name="com.inetbanking.testCases.TC_LoginTest_001"/>
-<!--  <class name="com.inetbanking.testCases.TC_LoginDDT_002"/> --><!-- Data driven test case added to TestNG.xml file -->
-<!--  <class name="com.inetbanking.testCases.TC_AddCustomerTest_003"/>-->
+<class name="com.inetbanking.testCases.TC_LoginDDT_002"/> <!-- Data driven test case added to TestNG.xml file -->
+<class name="com.inetbanking.testCases.TC_AddCustomerTest_003"/>
 </classes>
 
 </test>
