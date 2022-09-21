@@ -3,6 +3,7 @@ package com.inetbanking.testCases;
 import java.io.IOException;
 
 import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
 import com.inetbanking.pageObjects.AddCustomerPage;
@@ -18,11 +19,17 @@ public class TC_AddCustomerTest_003 extends BaseClass //We have to extend the ba
 		//LoginPage objects will be called for login
 		
 		LoginPage lp=new LoginPage(driver);
+		
+		Thread.sleep(3000);
+		
+		//Next 2 lines are to close google analytics consent form
+		driver.switchTo().frame("ccpa-consent-notice");
+		driver.findElement(By.xpath("//button[@id='close']")).click();
+		
+		
 		lp.setUserName(username);
 		Logger.info("User name is provided");
 		lp.setPassword(password);
-		
-		Thread.sleep(3000);
 		Logger.info("Password is provided");
 		lp.clickSubmit();
 		

@@ -2,6 +2,7 @@ package com.inetbanking.testCases;
 
 import java.io.IOException;
 
+import org.openqa.selenium.By;
 //import org.openqa.selenium.JavascriptExecutor;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -17,6 +18,12 @@ public class TC_LoginTest_001 extends BaseClass
 		Logger.info("URL is opened");
 		
 		LoginPage lp=new LoginPage(driver);
+		
+		Thread.sleep(3000);
+		//Next 2 lines are to close google analytics consent form
+		driver.switchTo().frame("ccpa-consent-notice");
+		driver.findElement(By.xpath("//button[@id='close']")).click();
+		
 		
 		
 		lp.setUserName(username);

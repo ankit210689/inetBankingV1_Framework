@@ -5,6 +5,7 @@ package com.inetbanking.testCases;
 import java.io.IOException;
 
 import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.NoAlertPresentException;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -14,10 +15,28 @@ import com.inetbanking.utilities.XLUtils;
 
 public class TC_LoginDDT_002 extends BaseClass
 {
+	
+	
 	@Test(dataProvider="LoginData")//It refers the dataProvider method LoginData
 	public void loginDDT(String user,String pwd) throws InterruptedException
 	{
 		LoginPage lp=new LoginPage(driver);
+		
+		//try-catch segment to handle google analytics iframe for multiple data sets
+		//try segment will perform the google ad closure operation during first run
+		try {
+			driver.findElement(By.id("ccpa-consent-notice"));
+			driver.switchTo().frame("ccpa-consent-notice");
+			driver.findElement(By.xpath("//button[@id='close']")).click();
+			
+		} 
+		//Catch segment will take from 2nd entry onwards as google ad will not show after closing it during first entry
+		catch (org.openqa.selenium.NoSuchElementException e) {
+			driver.switchTo().parentFrame();
+		}
+		
+		
+		
 		lp.setUserName(user);
 		Logger.info("user name provided");
 		lp.setPassword(pwd);
