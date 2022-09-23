@@ -1,9 +1,11 @@
 package com.inetbanking.testCases;
 
 import java.io.IOException;
+import java.util.List;
 
 import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import com.inetbanking.pageObjects.AddCustomerPage;
@@ -43,6 +45,17 @@ public class TC_AddCustomerTest_003 extends BaseClass //We have to extend the ba
 		
 		addcust.clickAddNewCustomer();
 		Thread.sleep(3000);
+		
+		//Handling google ad frame using if statement-More details in Day3_FrameSwitchingAndWindowHandles.java class in Selenium Concepts butler package
+		
+		List<WebElement> Frames=driver.findElements(By.xpath("//iframe"));
+		int TotalFrames=Frames.size();
+		
+		if (TotalFrames>0) {
+			
+			driver.navigate().back();
+			driver.navigate().forward();
+		}
 		
 		Logger.info("Providing customer details......");
 		

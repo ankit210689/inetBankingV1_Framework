@@ -16,7 +16,7 @@
 <classes>
 <class name="com.inetbanking.testCases.TC_LoginTest_001"/>
 <class name="com.inetbanking.testCases.TC_LoginDDT_002"/> Data driven test case added to TestNG.xml file
-<!-- <class name="com.inetbanking.testCases.TC_AddCustomerTest_003"/> Need to handle ad window after clicking New Customer button-->
+<class name="com.inetbanking.testCases.TC_AddCustomerTest_003"/> Need to handle ad window after clicking New Customer button
 </classes>
 
 </test>
